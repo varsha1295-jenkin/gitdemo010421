@@ -1,0 +1,127 @@
+root password: youngstar@1210
+another admin user varsha, Varsha@121095
+
+1. overview of RHCSA 7
+2. Introduction of Linux RHCSA 7
+3. Installation of VMware 
+4. Installation of Centos 7 iso file on VMware
+5. Remote access of VM using putty --How to Access Linux Server Remotely
+6. Linux basic commands
+7. basic linux commands---chown & chgrp ,chmod
+8. Linux system adminitration
+9. Modify Linux User Properties | Linux Password Policy |
+10.YUM Repository Configuration RHEL 7                        could not understand
+11.How to Create Linux Groups | Set Group Password   read again an understand
+12.Linux File Permissions | umask | chmod |
+13.ACL | Advanced Linux File Permissions
+
+
+mkdir -p 1/2/3/4  - to create directory inside directory
+rmdir -rf 3/  - to delete forcefully directory 
+rm -i touch1 - to ask confirmation to delete file yes/no
+rm -r dirname ---to delete directory with content
+!!- showing last excuted command
+history - show all commands history
+history -c   - clear all the history
+uname -a - showing systenm name, kernel verion ,intall date/time
+cat > file name --- to write something into file
+cat >> file name ---to append something into file
+cat -n filename ---to give numbers in file containing text with spaces
+cat -b filename----to give numbers in file containing text without spaces 
+cp filename (source) destination --to copy file
+i.e cp date +%d-%M-%Y(filename) /home (destination)
+cp -pv filename destination (-pv preserve all file properties while copying)
+ls -ltr filename----showing all file properties rw--r--r like this
+cp -Rv /downloads/desktop                  --copy directory from one location to another location
+cd downloads
+
+mv n1 nobe ---rename filename 
+mv n1 /home ----n1 file saved to home location
+
+8th video
+cat /etc/passwd ---- all user info will get here
+cat /etc/passwd |grep root ---searched for root user in passwd file
+cat /etc/defaults/useradd------
+cat /etc/login.defs---
+
+/etc/skel  /etc/defaults/useradd  /etc/login.defs--- these three file are used to store user info user login details user group details,passwd age,passwd encyption
+
+Useradd & verified related files
+
+useradd test1
+passwd test1 
+(here create new password) 
+ cat /etc/paswd grep | test1 ---- to check password file created
+ cat /etc/group grep | test1 ---- to check group file created
+ cat /etc/shadow grep | test1 --- to check encyted passwd created in hadow file
+ 
+ cd /home  to check test1 directory created
+ cd test1
+ 
+ 
+ls -l --- to check default file created
+ls -la ---to check other bashrc. bash_logout bash_profile files created or not
+useradd -u 1212 -g test1 -G root  -c "admin user for RHCSA" -s /bin/bash -d /opt/rhcsa -e 2021-08-01 -p rhcsa@123 rhcsa --custom user add trick
+
+u for user UID , -g for primary groip -G secondary group, -c for comment writing, -s for shell -d for home path wroting -e for expiry of user date, -p for password
+
+9th video
+usermod -l varshad desai   --newusername old username (to change username used this command)
+cat /etc/passwd grep | desai   --- this command is to check new username updated in output
+
+usermod -aG test1,test5 rhcsa15 -- this command is used to add groups to particular user (test1,test5 are groups & rhcsa uername)
+id rhcsa15 ----- command is used to check groups added to username or not
+
+usermod -g test1 rhcsa15  ---primary groupcannot be appended and using this command primary group name will be change
+
+usermod -s /sbin/nologin rhcsa ---block user from remote login 
+cat /etc/shells   all shells will dispaly here
+
+usermod -L rhcsa15 ---- locked user 
+cat /etc/shadow grep | rhcsa15   to check user locked or not if user locked get an exlamatory mark
+ usermod -U rhcsa15 ---to unlock the user 
+ cat /etc/shadow grep | rhcsa15 
+
+usermod -f rhcsa15 -------used to inactive
+
+usermod -e 2021-10-01 rhcsa15 ---to set expiry date for user
+cat /etc/shadow  grep | rhcsa15 ----to check set expiry date in shadow file
+
+usermod -c "my admin" rhcsa15 ---to add comment to user
+cat /etc/passwd | grep rhcsa15 ---to check comment added in output 
+
+chage -l rhcsa15---showing user account details expiry and all
+chage -m 0 -M 60 -W 15 -E 2024-04-01 rhcsa15 
+-m minimum no of days that password can change
+-M maximum number of days that password change'
+-W warning to change password
+-E expiry date set
+
+11th video
+groupadd groupname , groupdel groupname
+useradd username, userdel username
+usermod -G finusers user1 ----- -G secondary group--- usermod -G newgroupname oldgroupname---to add user in finusers group
+
+usermod -G finusers user6--to add user6 into finusers group
+gpasswd -A user6 finusers ---to give permission to user6 to add another member into this finusers group -- -A for to add single user
+gpasswd -M user6,user7 finusers --to give permissio to add multiple member in group -M for to add mumtiple group
+gpasswd -d finusers user6--- to remove single user from group
+
+groupmod -g 1015 finusers --- to change group id
+groupmod -n engusers finusers---to change group name new username,old username
+userdel -r -f user5 --- -r delete from home directory and -f forcefully delete related all settings
+
+12thh video
+read 4 write 2 execute 1  421
+
+sudo chmod 421 file1  
+-r---w---x.
+sudo chmod 21  file1 
+-----w---x.
+
+sudo chmod 41  file1 
+----r----x.
+
+ sudo chmod g+x s4.txt
+ sudo chmod 755 D.txt
+ sudo chmod ugo+rwx A.txt

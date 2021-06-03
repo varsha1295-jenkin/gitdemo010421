@@ -1,0 +1,447 @@
+login as: jenkindemo
+jenkindemo@104.211.75.128's password:
+Activate the web console with: systemctl enable --now cockpit.socket
+
+[jenkindemo@jenkindemo ~]$ sudo -i
+[root@jenkindemo ~]# yum install java-1.8.0-openjdk-devel
+Last metadata expiration check: 0:01:34 ago on Sun 28 Mar 2021 07:24:38 AM UTC.
+Dependencies resolved.
+================================================================================
+ Package                     Arch   Version           Repository           Size
+================================================================================
+Installing:
+ java-1.8.0-openjdk-devel    x86_64 1:1.8.0.275.b01-1.el8_3
+                                                      AppStream-openlogic 9.8 M
+Installing dependencies:
+ abattis-cantarell-fonts     noarch 0.0.25-4.el8      AppStream-openlogic 155 k
+ alsa-lib                    x86_64 1.2.3.2-1.el8     AppStream-openlogic 469 k
+ copy-jdk-configs            noarch 3.7-4.el8         AppStream-openlogic  27 k
+ fontconfig                  x86_64 2.13.1-3.el8      BaseOS-openlogic    275 k
+ fontpackages-filesystem     noarch 1.44-22.el8       BaseOS-openlogic     16 k
+ giflib                      x86_64 5.1.4-3.el8       AppStream-openlogic  51 k
+ java-1.8.0-openjdk          x86_64 1:1.8.0.275.b01-1.el8_3
+                                                      AppStream-openlogic 330 k
+ java-1.8.0-openjdk-headless x86_64 1:1.8.0.275.b01-1.el8_3
+                                                      AppStream-openlogic  34 M
+ javapackages-filesystem     noarch 5.3.0-1.module_el8.0.0+11+5b8c10bd
+                                                      AppStream-openlogic  30 k
+ libX11                      x86_64 1.6.8-3.el8       AppStream-openlogic 611 k
+ libX11-common               noarch 1.6.8-3.el8       AppStream-openlogic 158 k
+ libXau                      x86_64 1.0.9-3.el8       AppStream-openlogic  37 k
+ libXcomposite               x86_64 0.4.4-14.el8      AppStream-openlogic  28 k
+ libXext                     x86_64 1.3.4-1.el8       AppStream-openlogic  45 k
+ libXi                       x86_64 1.7.10-1.el8      AppStream-openlogic  49 k
+ libXrender                  x86_64 0.9.10-7.el8      AppStream-openlogic  33 k
+ libXtst                     x86_64 1.2.3-7.el8       AppStream-openlogic  22 k
+ libfontenc                  x86_64 1.1.3-8.el8       AppStream-openlogic  37 k
+ libjpeg-turbo               x86_64 1.5.3-10.el8      AppStream-openlogic 156 k
+ libxcb                      x86_64 1.13.1-1.el8      AppStream-openlogic 229 k
+ lksctp-tools                x86_64 1.0.18-3.el8      BaseOS-openlogic    100 k
+ lua                         x86_64 5.3.4-11.el8      AppStream-openlogic 193 k
+ ttmkfdir                    x86_64 3.0.9-54.el8      AppStream-openlogic  62 k
+ tzdata-java                 noarch 2021a-1.el8       AppStream-openlogic 192 k
+ xorg-x11-font-utils         x86_64 1:7.5-40.el8      AppStream-openlogic 103 k
+ xorg-x11-fonts-Type1        noarch 7.5-19.el8        AppStream-openlogic 522 k
+Enabling module streams:
+ javapackages-runtime               201801
+
+Transaction Summary
+================================================================================
+Install  27 Packages
+
+Total download size: 47 M
+Installed size: 168 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/27): copy-jdk-configs-3.7-4.el8.noarch.rpm   128 kB/s |  27 kB     00:00
+(2/27): abattis-cantarell-fonts-0.0.25-4.el8.no 493 kB/s | 155 kB     00:00
+(3/27): giflib-5.1.4-3.el8.x86_64.rpm           357 kB/s |  51 kB     00:00
+(4/27): alsa-lib-1.2.3.2-1.el8.x86_64.rpm       1.0 MB/s | 469 kB     00:00
+(5/27): java-1.8.0-openjdk-1.8.0.275.b01-1.el8_ 2.1 MB/s | 330 kB     00:00
+(6/27): javapackages-filesystem-5.3.0-1.module_ 445 kB/s |  30 kB     00:00
+(7/27): libX11-1.6.8-3.el8.x86_64.rpm           2.7 MB/s | 611 kB     00:00
+(8/27): libX11-common-1.6.8-3.el8.noarch.rpm    1.5 MB/s | 158 kB     00:00
+(9/27): libXau-1.0.9-3.el8.x86_64.rpm           453 kB/s |  37 kB     00:00
+(10/27): java-1.8.0-openjdk-devel-1.8.0.275.b01  16 MB/s | 9.8 MB     00:00
+(11/27): libXcomposite-0.4.4-14.el8.x86_64.rpm  417 kB/s |  28 kB     00:00
+(12/27): libXext-1.3.4-1.el8.x86_64.rpm         623 kB/s |  45 kB     00:00
+(13/27): libXi-1.7.10-1.el8.x86_64.rpm          615 kB/s |  49 kB     00:00
+(14/27): libXrender-0.9.10-7.el8.x86_64.rpm     485 kB/s |  33 kB     00:00
+(15/27): libXtst-1.2.3-7.el8.x86_64.rpm         309 kB/s |  22 kB     00:00
+(16/27): libfontenc-1.1.3-8.el8.x86_64.rpm      473 kB/s |  37 kB     00:00
+(17/27): libjpeg-turbo-1.5.3-10.el8.x86_64.rpm  1.5 MB/s | 156 kB     00:00
+(18/27): libxcb-1.13.1-1.el8.x86_64.rpm         2.7 MB/s | 229 kB     00:00
+(19/27): java-1.8.0-openjdk-headless-1.8.0.275.  34 MB/s |  34 MB     00:01
+(20/27): ttmkfdir-3.0.9-54.el8.x86_64.rpm       384 kB/s |  62 kB     00:00
+(21/27): lua-5.3.4-11.el8.x86_64.rpm            1.0 MB/s | 193 kB     00:00
+(22/27): tzdata-java-2021a-1.el8.noarch.rpm     2.7 MB/s | 192 kB     00:00
+(23/27): xorg-x11-font-utils-7.5-40.el8.x86_64. 965 kB/s | 103 kB     00:00
+(24/27): xorg-x11-fonts-Type1-7.5-19.el8.noarch 3.9 MB/s | 522 kB     00:00
+(25/27): fontconfig-2.13.1-3.el8.x86_64.rpm     1.6 MB/s | 275 kB     00:00
+(26/27): lksctp-tools-1.0.18-3.el8.x86_64.rpm   933 kB/s | 100 kB     00:00
+(27/27): fontpackages-filesystem-1.44-22.el8.no 104 kB/s |  16 kB     00:00
+--------------------------------------------------------------------------------
+Total                                            28 MB/s |  47 MB     00:01
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Running scriptlet: copy-jdk-configs-3.7-4.el8.noarch                      1/1
+  Running scriptlet: java-1.8.0-openjdk-headless-1:1.8.0.275.b01-1.el8_3.   1/1
+  Preparing        :                                                        1/1
+  Installing       : fontpackages-filesystem-1.44-22.el8.noarch            1/27
+  Installing       : libjpeg-turbo-1.5.3-10.el8.x86_64                     2/27
+  Installing       : abattis-cantarell-fonts-0.0.25-4.el8.noarch           3/27
+  Installing       : fontconfig-2.13.1-3.el8.x86_64                        4/27
+  Running scriptlet: fontconfig-2.13.1-3.el8.x86_64                        4/27
+  Installing       : lksctp-tools-1.0.18-3.el8.x86_64                      5/27
+  Running scriptlet: lksctp-tools-1.0.18-3.el8.x86_64                      5/27
+  Installing       : tzdata-java-2021a-1.el8.noarch                        6/27
+  Installing       : ttmkfdir-3.0.9-54.el8.x86_64                          7/27
+  Installing       : lua-5.3.4-11.el8.x86_64                                                                   8/27
+  Installing       : copy-jdk-configs-3.7-4.el8.noarch                                                         9/27
+  Installing       : libfontenc-1.1.3-8.el8.x86_64                                                            10/27
+  Installing       : xorg-x11-font-utils-1:7.5-40.el8.x86_64                                                  11/27
+  Installing       : xorg-x11-fonts-Type1-7.5-19.el8.noarch                                                   12/27
+  Running scriptlet: xorg-x11-fonts-Type1-7.5-19.el8.noarch                                                   12/27
+  Installing       : libXau-1.0.9-3.el8.x86_64                                                                13/27
+  Installing       : libxcb-1.13.1-1.el8.x86_64                                                               14/27
+  Installing       : libX11-common-1.6.8-3.el8.noarch                                                         15/27
+  Installing       : libX11-1.6.8-3.el8.x86_64                                                                16/27
+  Installing       : libXext-1.3.4-1.el8.x86_64                                                               17/27
+  Installing       : libXi-1.7.10-1.el8.x86_64                                                                18/27
+  Installing       : libXtst-1.2.3-7.el8.x86_64                                                               19/27
+  Installing       : libXcomposite-0.4.4-14.el8.x86_64                                                        20/27
+  Installing       : libXrender-0.9.10-7.el8.x86_64                                                           21/27
+  Installing       : javapackages-filesystem-5.3.0-1.module_el8.0.0+11+5b8c10bd.noarch                        22/27
+  Installing       : java-1.8.0-openjdk-headless-1:1.8.0.275.b01-1.el8_3.x86_64                               23/27
+  Running scriptlet: java-1.8.0-openjdk-headless-1:1.8.0.275.b01-1.el8_3.x86_64                               23/27
+  Installing       : giflib-5.1.4-3.el8.x86_64                                                                24/27
+  Installing       : alsa-lib-1.2.3.2-1.el8.x86_64                                                            25/27
+  Running scriptlet: alsa-lib-1.2.3.2-1.el8.x86_64                                                            25/27
+  Installing       : java-1.8.0-openjdk-1:1.8.0.275.b01-1.el8_3.x86_64                                        26/27
+  Running scriptlet: java-1.8.0-openjdk-1:1.8.0.275.b01-1.el8_3.x86_64                                        26/27
+  Installing       : java-1.8.0-openjdk-devel-1:1.8.0.275.b01-1.el8_3.x86_64                                  27/27
+  Running scriptlet: java-1.8.0-openjdk-devel-1:1.8.0.275.b01-1.el8_3.x86_64                                  27/27
+  Running scriptlet: copy-jdk-configs-3.7-4.el8.noarch                                                        27/27
+  Running scriptlet: java-1.8.0-openjdk-1:1.8.0.275.b01-1.el8_3.x86_64                                        27/27
+  Running scriptlet: java-1.8.0-openjdk-devel-1:1.8.0.275.b01-1.el8_3.x86_64                                  27/27
+  Running scriptlet: fontconfig-2.13.1-3.el8.x86_64                                                           27/27
+  Verifying        : abattis-cantarell-fonts-0.0.25-4.el8.noarch                                               1/27
+  Verifying        : alsa-lib-1.2.3.2-1.el8.x86_64                                                             2/27
+  Verifying        : copy-jdk-configs-3.7-4.el8.noarch                                                         3/27
+  Verifying        : giflib-5.1.4-3.el8.x86_64                                                                 4/27
+  Verifying        : java-1.8.0-openjdk-1:1.8.0.275.b01-1.el8_3.x86_64                                         5/27
+  Verifying        : java-1.8.0-openjdk-devel-1:1.8.0.275.b01-1.el8_3.x86_64                                   6/27
+  Verifying        : java-1.8.0-openjdk-headless-1:1.8.0.275.b01-1.el8_3.x86_64                                7/27
+  Verifying        : javapackages-filesystem-5.3.0-1.module_el8.0.0+11+5b8c10bd.noarch                         8/27
+  Verifying        : libX11-1.6.8-3.el8.x86_64                                                                 9/27
+  Verifying        : libX11-common-1.6.8-3.el8.noarch                                                         10/27
+  Verifying        : libXau-1.0.9-3.el8.x86_64                                                                11/27
+  Verifying        : libXcomposite-0.4.4-14.el8.x86_64                                                        12/27
+  Verifying        : libXext-1.3.4-1.el8.x86_64                                                               13/27
+  Verifying        : libXi-1.7.10-1.el8.x86_64                                                                14/27
+  Verifying        : libXrender-0.9.10-7.el8.x86_64                                                           15/27
+  Verifying        : libXtst-1.2.3-7.el8.x86_64                                                               16/27
+  Verifying        : libfontenc-1.1.3-8.el8.x86_64                                                            17/27
+  Verifying        : libjpeg-turbo-1.5.3-10.el8.x86_64                                                        18/27
+  Verifying        : libxcb-1.13.1-1.el8.x86_64                                                               19/27
+  Verifying        : lua-5.3.4-11.el8.x86_64                                                                  20/27
+  Verifying        : ttmkfdir-3.0.9-54.el8.x86_64                                                             21/27
+  Verifying        : tzdata-java-2021a-1.el8.noarch                                                           22/27
+  Verifying        : xorg-x11-font-utils-1:7.5-40.el8.x86_64                                                  23/27
+  Verifying        : xorg-x11-fonts-Type1-7.5-19.el8.noarch                                                   24/27
+  Verifying        : fontconfig-2.13.1-3.el8.x86_64                                                           25/27
+  Verifying        : fontpackages-filesystem-1.44-22.el8.noarch                                               26/27
+  Verifying        : lksctp-tools-1.0.18-3.el8.x86_64                                                         27/27
+
+Installed:
+  abattis-cantarell-fonts-0.0.25-4.el8.noarch
+  alsa-lib-1.2.3.2-1.el8.x86_64
+  copy-jdk-configs-3.7-4.el8.noarch
+  fontconfig-2.13.1-3.el8.x86_64
+  fontpackages-filesystem-1.44-22.el8.noarch
+  giflib-5.1.4-3.el8.x86_64
+  java-1.8.0-openjdk-1:1.8.0.275.b01-1.el8_3.x86_64
+  java-1.8.0-openjdk-devel-1:1.8.0.275.b01-1.el8_3.x86_64
+  java-1.8.0-openjdk-headless-1:1.8.0.275.b01-1.el8_3.x86_64
+  javapackages-filesystem-5.3.0-1.module_el8.0.0+11+5b8c10bd.noarch
+  libX11-1.6.8-3.el8.x86_64
+  libX11-common-1.6.8-3.el8.noarch
+  libXau-1.0.9-3.el8.x86_64
+  libXcomposite-0.4.4-14.el8.x86_64
+  libXext-1.3.4-1.el8.x86_64
+  libXi-1.7.10-1.el8.x86_64
+  libXrender-0.9.10-7.el8.x86_64
+  libXtst-1.2.3-7.el8.x86_64
+  libfontenc-1.1.3-8.el8.x86_64
+  libjpeg-turbo-1.5.3-10.el8.x86_64
+  libxcb-1.13.1-1.el8.x86_64
+  lksctp-tools-1.0.18-3.el8.x86_64
+  lua-5.3.4-11.el8.x86_64
+  ttmkfdir-3.0.9-54.el8.x86_64
+  tzdata-java-2021a-1.el8.noarch
+  xorg-x11-font-utils-1:7.5-40.el8.x86_64
+  xorg-x11-fonts-Type1-7.5-19.el8.noarch
+
+Complete!
+[root@jenkindemo ~]# $ curl -fsSL https://get.docker.com -o get-docker.sh
+-bash: $: command not found
+[root@jenkindemo ~]# curl -fsSL https://get.docker.com -o get-docker.sh
+[root@jenkindemo ~]# sudo sh get-docker.sh
+# Executing docker install script, commit: 3d8fe77c2c46c5b7571f94b42793905e5b3e42e4
++ sh -c 'yum install -y -q yum-utils'
++ sh -c 'yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo'
+Adding repo from: https://download.docker.com/linux/centos/docker-ce.repo
++ '[' stable '!=' stable ']'
++ sh -c 'yum makecache'
+CentOS-8 - AppStream (OpenLogic)                                                     34 kB/s | 3.5 kB     00:00
+CentOS-8 - Base (OpenLogic)                                                          29 kB/s | 3.1 kB     00:00
+CentOS-8 - Extras (OpenLogic)                                                        24 kB/s | 2.5 kB     00:00
+CentOS-8 - AppStream                                                                 43 kB/s | 4.3 kB     00:00
+CentOS-8 - Base                                                                      13 kB/s | 3.9 kB     00:00
+CentOS-8 - Extras                                                                   3.5 kB/s | 1.5 kB     00:00
+CentOS-8 - OpenLogic packages for x86_64                                             28 kB/s | 2.9 kB     00:00
+Docker CE Stable - x86_64                                                            58 kB/s |  11 kB     00:00
+Metadata cache created.
++ '[' -n '' ']'
++ sh -c 'yum install -y -q docker-ce'
+warning: /var/cache/dnf/docker-ce-stable-fa9dc42ab4cec2f4/packages/containerd.io-1.4.4-3.1.el8.x86_64.rpm: Header V4                                                RSA/SHA512 Signature, key ID 621e9f35: NOKEY
+Importing GPG key 0x621E9F35:
+ Userid     : "Docker Release (CE rpm) <docker@docker.com>"
+ Fingerprint: 060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35
+ From       : https://download.docker.com/linux/centos/gpg
+If you would like to use Docker as a non-root user, you should now consider
+adding your user to the "docker" group with something like:
+
+  sudo usermod -aG docker your-user
+
+Remember that you will have to log out and back in for this to take effect!
+
+WARNING: Adding a user to the "docker" group will grant the ability to run
+         containers which can be used to obtain root privileges on the
+         docker host.
+         Refer to https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface
+         for more information.
+[root@jenkindemo ~]# docker version
+Client: Docker Engine - Community
+ Version:           20.10.5
+ API version:       1.41
+ Go version:        go1.13.15
+ Git commit:        55c4c88
+ Built:             Tue Mar  2 20:17:04 2021
+ OS/Arch:           linux/amd64
+ Context:           default
+ Experimental:      true
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+[root@jenkindemo ~]# docker run -d -p 8080:8080 -p 50000:50000 -v /home/centos:/var/jenkins_home jenkins/jenkins
+docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+[root@jenkindemo ~]# docker ps
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+[root@jenkindemo ~]# ^C
+[root@jenkindemo ~]# systemctl start docker
+[root@jenkindemo ~]# docker run -d -p 8080:8080 -p 50000:50000 -v /home/centos:/var/jenkins_home jenkins/jenkins
+Unable to find image 'jenkins/jenkins:latest' locally
+latest: Pulling from jenkins/jenkins
+e22122b926a1: Pull complete
+de0e523d52df: Pull complete
+694ee9f3173b: Pull complete
+197e64995712: Pull complete
+3102a522dbab: Pull complete
+89b32f576e8c: Pull complete
+e9df0c48fc43: Pull complete
+3c6a5814bb03: Pull complete
+ea6280d425bc: Pull complete
+2f53fb59ca52: Pull complete
+feb211943a87: Pull complete
+ff041ec89a9b: Pull complete
+595167dbd9b3: Pull complete
+c10e3b8f624c: Pull complete
+bafda9b7a56f: Pull complete
+08460359ca27: Pull complete
+Digest: sha256:cc18735e2378fad6c76597b1217bc00a55de2cd939167abfe3f38ba1b696da47
+Status: Downloaded newer image for jenkins/jenkins:latest
+572b801d6249db684abe3f47197c31d07f124b946850856ea9f52db1ef377543
+[root@jenkindemo ~]# docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[root@jenkindemo ~]# docker ps -a
+CONTAINER ID   IMAGE             COMMAND                  CREATED              STATUS                          PORTS                                                    NAMES
+572b801d6249   jenkins/jenkins   "/sbin/tini -- /usr/…"   About a minute ago   Exited (1) About a minute ago                                                            serene_khorana
+[root@jenkindemo ~]# docker logs^C
+[root@jenkindemo ~]# docker log 572b801d6249
+docker: 'log' is not a docker command.
+See 'docker --help'
+[root@jenkindemo ~]# docker logs 572b801d6249
+touch: cannot touch '/var/jenkins_home/copy_reference_file.log': Permission denied
+Can not write to /var/jenkins_home/copy_reference_file.log. Wrong volume permissions?
+[root@jenkindemo ~]#  sudo chown -R 1000:1000 /home/centos/
+[root@jenkindemo ~]# docker ps -a
+CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS                     PORTS     NAMES
+572b801d6249   jenkins/jenkins   "/sbin/tini -- /usr/…"   9 minutes ago   Exited (1) 9 minutes ago             serene_khorana
+[root@jenkindemo ~]# docker run -d -p 8080:8080 -p 50000:50000 -v /home/centos:/var/jenkins_home jenkins/jenkins
+fd57191023ee4a7ecb8b3f12af48e079dffab27510506b5c57ebfb904a04f43b
+[root@jenkindemo ~]# docker ps
+CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS         PORTS                                                                            NAMES
+fd57191023ee   jenkins/jenkins   "/sbin/tini -- /usr/…"   5 seconds ago   Up 5 seconds   0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000                              /tcp   jovial_tharp
+[root@jenkindemo ~]# docker ps -a
+CONTAINER ID   IMAGE             COMMAND                  CREATED          STATUS                     PORTS                                                                            NAMES
+fd57191023ee   jenkins/jenkins   "/sbin/tini -- /usr/…"   13 seconds ago   Up 12 seconds              0.0.0.0:8080->8080/tcp, 0.0.0.0                              :50000->50000/tcp   jovial_tharp
+572b801d6249   jenkins/jenkins   "/sbin/tini -- /usr/…"   9 minutes ago    Exited (1) 9 minutes ago                                                                                    serene_khorana
+[root@jenkindemo ~]# docker exec -it fd57191023ee sh
+$ docker logs
+sh: 1: docker: not found
+$ docker log
+sh: 2: docker: not found
+$ exit
+[root@jenkindemo ~]# docker ps -a
+CONTAINER ID   IMAGE             COMMAND                  CREATED          STATUS                      PORTS                                                                   NAMES
+fd57191023ee   jenkins/jenkins   "/sbin/tini -- /usr/…"   6 minutes ago    Up 6 minutes                0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->                     50000/tcp   jovial_tharp
+572b801d6249   jenkins/jenkins   "/sbin/tini -- /usr/…"   15 minutes ago   Exited (1) 15 minutes ago                                                                           serene_khorana
+[root@jenkindemo ~]# docker rm fd57191023ee 572b801d6249
+572b801d6249
+Error response from daemon: You cannot remove a running container fd57191023ee4a7ecb8b3f12af48e079dffab27510506b5c57ebfb904a04f43b. Stop the c                     ontainer before attempting removal or force remove
+[root@jenkindemo ~]# docker ps -a
+CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS         PORTS                                              NA                     MES
+fd57191023ee   jenkins/jenkins   "/sbin/tini -- /usr/…"   6 minutes ago   Up 6 minutes   0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   jo                     vial_tharp
+[root@jenkindemo ~]# docker fd57191023ee stop
+docker: 'fd57191023ee' is not a docker command.
+See 'docker --help'
+[root@jenkindemo ~]# docker stop fd57191023ee
+fd57191023ee
+[root@jenkindemo ~]# docker ps -a
+CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS                       PORTS     NAMES
+fd57191023ee   jenkins/jenkins   "/sbin/tini -- /usr/…"   7 minutes ago   Exited (143) 5 seconds ago             jovial_tharp
+[root@jenkindemo ~]# docker rm fd57191023ee
+fd57191023ee
+[root@jenkindemo ~]# docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[root@jenkindemo ~]#
+[root@jenkindemo ~]# docker run -d -p 8080:8080 -p 50000:50000 -v /home/centos:/var/jenkins_home jenkins/jenkins
+7b65819d795ab20b27c4d0b02f408f1093de32131668e136a6b1692018f3d161
+[root@jenkindemo ~]# docker ps -a
+CONTAINER ID   IMAGE             COMMAND                  CREATED          STATUS          PORTS                                                                   NAMES
+7b65819d795a   jenkins/jenkins   "/sbin/tini -- /usr/…"   12 seconds ago   Up 10 seconds   0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp                        angry_galois
+[root@jenkindemo ~]# docker logs 7b65819d795a
+Running from: /usr/share/jenkins/jenkins.war
+webroot: EnvVars.masterEnvVars.get("JENKINS_HOME")
+2021-03-28 07:54:42.525+0000 [id=1]     INFO    org.eclipse.jetty.util.log.Log#initialized: Logging initialized @489ms to org.eclipse.jetty.util.log               .JavaUtilLog
+2021-03-28 07:54:42.658+0000 [id=1]     INFO    winstone.Logger#logInternal: Beginning extraction from war file
+2021-03-28 07:54:42.691+0000 [id=1]     WARNING o.e.j.s.handler.ContextHandler#setContextPath: Empty contextPath
+2021-03-28 07:54:42.758+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: jetty-9.4.38.v20210224; built: 2021-02-24T20:25:07.675Z; gi               t: 288f3cc74549e8a913bf363250b0744f2695b8e6; jvm 1.8.0_282-b08
+2021-03-28 07:54:43.075+0000 [id=1]     INFO    o.e.j.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jet               ty.jsp.JettyJspServlet
+2021-03-28 07:54:43.121+0000 [id=1]     INFO    o.e.j.s.s.DefaultSessionIdManager#doStart: DefaultSessionIdManager workerName=node0
+2021-03-28 07:54:43.121+0000 [id=1]     INFO    o.e.j.s.s.DefaultSessionIdManager#doStart: No SessionScavenger set, using defaults
+2021-03-28 07:54:43.123+0000 [id=1]     INFO    o.e.j.server.session.HouseKeeper#startScavenging: node0 Scavenging every 660000ms
+2021-03-28 07:54:43.627+0000 [id=1]     INFO    hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.ma               sterEnvVars.get("JENKINS_HOME")
+2021-03-28 07:54:43.755+0000 [id=1]     INFO    o.e.j.s.handler.ContextHandler#doStart: Started w.@7a3793c7{Jenkins v2.285,/,file:///var/jenkins_hom               e/war/,AVAILABLE}{/var/jenkins_home/war}
+2021-03-28 07:54:43.786+0000 [id=1]     INFO    o.e.j.server.AbstractConnector#doStart: Started ServerConnector@15975490{HTTP/1.1, (http/1.1)}{0.0.0               .0:8080}
+2021-03-28 07:54:43.787+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: Started @1752ms
+2021-03-28 07:54:43.788+0000 [id=21]    INFO    winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2021-03-28 07:54:45.181+0000 [id=28]    INFO    jenkins.InitReactorRunner$1#onAttained: Started initialization
+2021-03-28 07:54:45.240+0000 [id=26]    INFO    jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2021-03-28 07:54:46.672+0000 [id=26]    INFO    jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2021-03-28 07:54:46.679+0000 [id=26]    INFO    jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2021-03-28 07:54:46.689+0000 [id=27]    INFO    jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2021-03-28 07:54:47.118+0000 [id=28]    INFO    jenkins.InitReactorRunner$1#onAttained: System config loaded
+2021-03-28 07:54:47.119+0000 [id=28]    INFO    jenkins.InitReactorRunner$1#onAttained: System config adapted
+2021-03-28 07:54:47.119+0000 [id=28]    INFO    jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2021-03-28 07:54:47.119+0000 [id=28]    INFO    jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2021-03-28 07:54:47.328+0000 [id=42]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$0: Started Download metadata
+2021-03-28 07:54:47.334+0000 [id=42]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$0: Finished Download metadata. 5 ms
+2021-03-28 07:54:47.346+0000 [id=28]    INFO    jenkins.install.SetupWizard#init:
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+Jenkins initial setup is required. An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+
+8cccaf943b1543529473ed21a3e43d38
+
+This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+2021-03-28 07:54:55.404+0000 [id=28]    INFO    jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2021-03-28 07:54:55.527+0000 [id=20]    INFO    hudson.WebAppMain$3#run: Jenkins is fully up and running
+[root@jenkindemo ~]# docker exec -it 7b65819d795a sh
+$ exit
+[root@jenkindemo ~]# docker logs 7b65819d795a
+Running from: /usr/share/jenkins/jenkins.war
+webroot: EnvVars.masterEnvVars.get("JENKINS_HOME")
+2021-03-28 07:54:42.525+0000 [id=1]     INFO    org.eclipse.jetty.util.log.Log#initialized: Logging initialized @489ms to org.eclipse.jetty.util.log               .JavaUtilLog
+2021-03-28 07:54:42.658+0000 [id=1]     INFO    winstone.Logger#logInternal: Beginning extraction from war file
+2021-03-28 07:54:42.691+0000 [id=1]     WARNING o.e.j.s.handler.ContextHandler#setContextPath: Empty contextPath
+2021-03-28 07:54:42.758+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: jetty-9.4.38.v20210224; built: 2021-02-24T20:25:07.675Z; gi               t: 288f3cc74549e8a913bf363250b0744f2695b8e6; jvm 1.8.0_282-b08
+2021-03-28 07:54:43.075+0000 [id=1]     INFO    o.e.j.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jet               ty.jsp.JettyJspServlet
+2021-03-28 07:54:43.121+0000 [id=1]     INFO    o.e.j.s.s.DefaultSessionIdManager#doStart: DefaultSessionIdManager workerName=node0
+2021-03-28 07:54:43.121+0000 [id=1]     INFO    o.e.j.s.s.DefaultSessionIdManager#doStart: No SessionScavenger set, using defaults
+2021-03-28 07:54:43.123+0000 [id=1]     INFO    o.e.j.server.session.HouseKeeper#startScavenging: node0 Scavenging every 660000ms
+2021-03-28 07:54:43.627+0000 [id=1]     INFO    hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.ma               sterEnvVars.get("JENKINS_HOME")
+2021-03-28 07:54:43.755+0000 [id=1]     INFO    o.e.j.s.handler.ContextHandler#doStart: Started w.@7a3793c7{Jenkins v2.285,/,file:///var/jenkins_hom               e/war/,AVAILABLE}{/var/jenkins_home/war}
+2021-03-28 07:54:43.786+0000 [id=1]     INFO    o.e.j.server.AbstractConnector#doStart: Started ServerConnector@15975490{HTTP/1.1, (http/1.1)}{0.0.0               .0:8080}
+2021-03-28 07:54:43.787+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: Started @1752ms
+2021-03-28 07:54:43.788+0000 [id=21]    INFO    winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2021-03-28 07:54:45.181+0000 [id=28]    INFO    jenkins.InitReactorRunner$1#onAttained: Started initialization
+2021-03-28 07:54:45.240+0000 [id=26]    INFO    jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2021-03-28 07:54:46.672+0000 [id=26]    INFO    jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2021-03-28 07:54:46.679+0000 [id=26]    INFO    jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2021-03-28 07:54:46.689+0000 [id=27]    INFO    jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2021-03-28 07:54:47.118+0000 [id=28]    INFO    jenkins.InitReactorRunner$1#onAttained: System config loaded
+2021-03-28 07:54:47.119+0000 [id=28]    INFO    jenkins.InitReactorRunner$1#onAttained: System config adapted
+2021-03-28 07:54:47.119+0000 [id=28]    INFO    jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2021-03-28 07:54:47.119+0000 [id=28]    INFO    jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2021-03-28 07:54:47.328+0000 [id=42]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$0: Started Download metadata
+2021-03-28 07:54:47.334+0000 [id=42]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$0: Finished Download metadata. 5 ms
+2021-03-28 07:54:47.346+0000 [id=28]    INFO    jenkins.install.SetupWizard#init:
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+Jenkins initial setup is required. An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+
+8cccaf943b1543529473ed21a3e43d38
+
+This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+2021-03-28 07:54:55.404+0000 [id=28]    INFO    jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2021-03-28 07:54:55.527+0000 [id=20]    INFO    hudson.WebAppMain$3#run: Jenkins is fully up and running
+[root@jenkindemo ~]# cd /var/jenkins_home/workspace/
+-bash: cd: /var/jenkins_home/workspace/: No such file or directory
+[root@jenkindemo ~]# cd /var/jenkins_home
+-bash: cd: /var/jenkins_home: No such file or directory
+[root@jenkindemo ~]# docker exec -it 7b65819d795a sh
+$ cd /var/jenkins_home/workspace
+$ ls
+28032021_job1
+$ cd 28032021_job1
+$ ls
+ 2021-v.txt   bookmarsk1.odt   git-270321.txt  'jira tricks.odt'  'my azure notes.txt'  'notepad++-sp notes.txt'   santoshparabtest.txt
+$ cd ..
+$ ls
+28032021_job1
+$ exit
+[root@jenkindemo ~]# docker ps
+CONTAINER ID   IMAGE             COMMAND                  CREATED             STATUS             PORTS                                              NAMES
+7b65819d795a   jenkins/jenkins   "/sbin/tini -- /usr/…"   About an hour ago   Up About an hour   0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   angry_galois
+[root@jenkindemo ~]#
+
+sect 2.
+sect 3
+
+sect 9
+sect 10
+11,12,13,14
+
+15

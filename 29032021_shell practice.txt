@@ -1,0 +1,47 @@
+login as: jenkindemo
+jenkindemo@104.211.75.128's password:
+Access denied
+jenkindemo@104.211.75.128's password:
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Mon Mar 29 08:01:01 UTC 2021 from 106.193.203.179 on ssh:nott                                                                                        y
+There was 1 failed login attempt since the last successful login.
+Last login: Mon Mar 29 03:34:30 2021 from 111.125.230.201
+[jenkindemo@jenkindemo ~]$ sudo -i
+[root@jenkindemo ~]# date
+Mon Mar 29 08:03:13 UTC 2021
+[root@jenkindemo ~]# ls
+anaconda-ks.cfg  get-docker.sh  original-ks.cfg
+[root@jenkindemo ~]# mkdir test
+[root@jenkindemo ~]# pwd
+/root
+[root@jenkindemo ~]# touch varsha.sh
+[root@jenkindemo ~]# vi varsha.sh
+[root@jenkindemo ~]# cat varsha.sh
+#!/bin/bash
+date
+ls
+mkdir varsha
+pwd
+echo "varsha desai"
+ls -a
+[root@jenkindemo ~]# sh varsha.sh
+Mon Mar 29 08:06:40 UTC 2021
+anaconda-ks.cfg  get-docker.sh  original-ks.cfg  test  varsha.sh
+/root
+varsha desai
+.                .bash_history  .bashrc        original-ks.cfg  test
+..               .bash_logout   .cshrc         .ssh             varsha
+anaconda-ks.cfg  .bash_profile  get-docker.sh  .tcshrc          varsha.sh
+[root@jenkindemo ~]# ls
+anaconda-ks.cfg  get-docker.sh  original-ks.cfg  test  varsha  varsha.sh
+[root@jenkindemo ~]# crontab -e
+no crontab for root - using an empty one
+crontab: no changes made to crontab
+[root@jenkindemo ~]# vi varsha.sh
+[root@jenkindemo ~]# touch varshadesai.sh
+[root@jenkindemo ~]# cat varshadesai.sh
+[root@jenkindemo ~]# ls
+anaconda-ks.cfg  get-docker.sh  original-ks.cfg  test  varsha  varshadesai.sh  varsha.sh
+[root@jenkindemo ~]# sh varshadesai.sh
+[root@jenkindemo ~]#

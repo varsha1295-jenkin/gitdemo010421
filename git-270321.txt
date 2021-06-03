@@ -1,0 +1,246 @@
+
+2703 morning
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO
+$ ls
+'my azure notes.txt'  'notepad++-sp notes.txt'
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO
+$ git init
+Initialized empty Git repository in D:/My files/GITREPO/.git/
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ ls -a
+ ./   ../   .git/  'my azure notes.txt'  'notepad++-sp notes.txt'
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ ls
+'my azure notes.txt'  'notepad++-sp notes.txt'
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git remote add origin https://github.com/varsha1295-jenkin/jenkindemo.git
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        my azure notes.txt
+        notepad++-sp notes.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git add  my azure notes.txt
+fatal: pathspec 'my' did not match any files
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git add my\ azure\ notes.txt
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   my azure notes.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        notepad++-sp notes.txt
+
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git add notepad++-sp\ notes.txt
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   my azure notes.txt
+        new file:   notepad++-sp notes.txt
+
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git commit -m "varsha's first commit here"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'LENOVO@DESKTOP-RVAA7LS.(none)')
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git push origin --all
+No refs in common and none specified; doing nothing.
+Perhaps you should specify a branch.
+Everything up-to-date
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git commit -m "varsha's first commit here"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'LENOVO@DESKTOP-RVAA7LS.(none)')
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git config --global user.email "varsha.axfone@gmail.com"
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git config --global user.name "varsha"
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git commit -m "varsha's first commit here"
+[master (root-commit) 64cd1d5] varsha's first commit here
+ 2 files changed, 1004 insertions(+)
+ create mode 100644 my azure notes.txt
+ create mode 100644 notepad++-sp notes.txt
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git logs
+git: 'logs' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git log
+commit 64cd1d5e86ac37bd3e4657134ffc88ddeff85f62 (HEAD -> master)
+Author: varsha <varsha.axfone@gmail.com>
+Date:   Sat Mar 27 14:25:54 2021 +0530
+
+    varsha's first commit here
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git push --all origin
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 11.35 KiB | 2.27 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/varsha1295-jenkin/jenkindemo.git
+ * [new branch]      master -> master
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$
+
+****************************************************************************************************************************
+
+evening 2703
+
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ ls
+ 2021-v.txt       git-270321.txt    'my azure notes.txt'
+ bookmarsk1.odt  'jira tricks.odt'  'notepad++-sp notes.txt'
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git branch -a
+* master
+  remotes/origin/master
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), 266 bytes | 8.00 KiB/s, done.
+From https://github.com/varsha1295-jenkin/jenkindemo
+ * [new branch]      dev        -> origin/dev
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git branch -a
+* master
+  remotes/origin/dev
+  remotes/origin/master
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ ls
+ 2021-v.txt   bookmarsk1.odt   git-270321.txt  'jira tricks.odt'  'my azure notes.txt'  'notepad++-sp notes.txt'
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (master)
+$ git checkout dev
+Switched to a new branch 'dev'
+Branch 'dev' set up to track remote branch 'dev' from 'origin'.
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (dev)
+$ ls
+ 2021-v.txt       git-270321.txt    'my azure notes.txt'       santoshparabtest.txt
+ bookmarsk1.odt  'jira tricks.odt'  'notepad++-sp notes.txt'
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (dev)
+$ git branch -a
+* dev
+  master
+  remotes/origin/dev
+  remotes/origin/master
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (dev)
+$ git branch release
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (dev)
+$ git branch -a
+* dev
+  master
+  release
+  remotes/origin/dev
+  remotes/origin/master
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (dev)
+$ git checkout release
+Switched to branch 'release'
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (release)
+$ ls
+ 2021-v.txt       git-270321.txt    'my azure notes.txt'       santoshparabtest.txt
+ bookmarsk1.odt  'jira tricks.odt'  'notepad++-sp notes.txt'
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (release)
+$ git push origin --all
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'release' on GitHub by visiting:
+remote:      https://github.com/varsha1295-jenkin/jenkindemo/pull/new/release
+remote:
+To https://github.com/varsha1295-jenkin/jenkindemo.git
+ * [new branch]      release -> release
+
+LENOVO@DESKTOP-RVAA7LS MINGW64 /d/My files/GITREPO (release)
+$
